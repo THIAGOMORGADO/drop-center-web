@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/ssHdw6uIUVr
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -22,7 +17,7 @@ export default function Component() {
         <SheetContent side="left">
           <Link href="#" className="flex items-center justify-start gap-2" prefetch={false}>
             <MountainIcon className="h-6 w-6" />
-            <span className="text-lg font-semibold">Multi-service Inc</span>
+            <span className="text-lg font-semibold">Multi-service</span>
           </Link>
           <div className="grid gap-4 py-6">
             <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
@@ -75,7 +70,7 @@ export default function Component() {
       <div className="flex container">
         <Link href="#" className="flex items-center justify-center gap-2 " prefetch={false}>
           <MountainIcon className="h-6 w-6" />
-          <span className="text-lg font-semibold">Multi-Service Inc</span>
+          <span className="text-lg font-semibold">Multi-Service</span>
         </Link>
       </div>
       <NavigationMenu className="hidden lg:flex">
