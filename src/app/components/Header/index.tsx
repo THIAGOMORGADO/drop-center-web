@@ -168,7 +168,7 @@ export default function Component() {
   )
 }
 
-function ChevronRightIcon(props) {
+function ChevronRightIcon(props: any) {
   return (
     <svg
       {...props}
