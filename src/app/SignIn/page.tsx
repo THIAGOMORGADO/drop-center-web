@@ -31,6 +31,7 @@ export default function SignInPage() {
             <span className="bg-background px-2 text-muted-foreground">Ou entre com</span>
           </div>
         </div>
+
         <div className="grid grid-cols-3 gap-3">
           <Button variant="outline">
             <GithubIcon className="mr-2 h-4 w-4" />
