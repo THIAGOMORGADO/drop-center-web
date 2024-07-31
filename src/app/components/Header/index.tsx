@@ -1,10 +1,19 @@
+'use client'
+
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
 import { NavigationMenu, NavigationMenuList, NavigationMenuLink, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
+import { useRouter } from "next/navigation"
 
-export default function Component() {
+
+
+export default function Header() {
+  const router = useRouter()
+  const handleSignIn = () => {
+    router.push('/SignIn')
+  }
   return (
     <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
       <Sheet>
@@ -162,7 +171,7 @@ export default function Component() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="ml-auto">
-        <Button>Sign In</Button>
+        <Button onClick={handleSignIn}>Sign In</Button>
       </div>
     </header>
   )
