@@ -28,17 +28,17 @@ export default function SlidebarMenu() {
               <nav className="grid gap-6 text-lg font-medium ">
                 <Link
                   href="/dashboard"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  className="flex items-center gap-1 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full sm:w-[50%] w-[23%]"
                   prefetch={false}
                   data-active={currentPath === '/dashboard'}
                 >
                   <DashboardIcon className="h-5 w-5" />
-                  dashboard
+                  <span className="hidden sm:block">Dashboard</span>
                 </Link>
                 <Link
 
                   href="/dashboard/home"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  className="flex items-center gap-1 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full "
                   prefetch={false}
                   data-active={currentPath === '/dashboard/home'}
 
@@ -46,13 +46,13 @@ export default function SlidebarMenu() {
                   <HomeIcon className="h-5 w-5" />
                   Home
                 </Link>
-                <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
+                <Link href="#" className="flex items-center gap-1 px-2.5 text-foreground" prefetch={false}>
                   <FileIcon className="h-5 w-5" />
                   Contatos
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  className="flex items-center gap-1 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full "
                   prefetch={false}
                 >
                   <PackageIcon className="h-5 w-5" />
@@ -60,7 +60,7 @@ export default function SlidebarMenu() {
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  className="flex items-center gap-1 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full "
                   prefetch={false}
                 >
                   <UsersIcon className="h-5 w-5" />
@@ -68,7 +68,7 @@ export default function SlidebarMenu() {
                 </Link>
                 <Link
                   href="#"
-                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  className="flex items-center gap-1 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full "
                   prefetch={false}
                 >
                   <LineChartIcon className="h-5 w-5" />
