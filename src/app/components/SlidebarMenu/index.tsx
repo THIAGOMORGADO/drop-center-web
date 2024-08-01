@@ -15,7 +15,6 @@ import { DashboardIcon, LogoutIcon, MenuIcon, SettingsIcon } from "../IconsSvg"
 export default function SlidebarMenu({ children }: { children: React.ReactNode }) {
   const pathName = usePathname();
 
-
   return (
     <div className="flex min-h-screen flex-col bg-muted/40">
       <Sidebar />
@@ -28,6 +27,7 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
+
 
             <SheetContent side="left" className="sm:max-w-xs flex flex-col gap-7 justify-center  border-none w-[300px] rounded-e-md">
               <div className="flex flex-row items-center justify-start gap-2 ">
@@ -87,13 +87,77 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
                     )
                   })
                 }
+
+            <SheetContent side="left" className="sm:max-w-xs">
+              <nav className="grid gap-6 text-lg font-medium ">
+                <Link
+                  href="/dashboard"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  prefetch={false}
+                  data-active={currentPath === '/dashboard'}
+                >
+                  <DashboardIcon className="h-5 w-5" />
+                  dashboard
+                </Link>
+                <Link
+
+                  href="/dashboard/home"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  prefetch={false}
+                  data-active={currentPath === '/dashboard/home'}
+
+                >
+                  <HomeIcon className="h-5 w-5" />
+                  Home
+                </Link>
+                <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
+                  <FileIcon className="h-5 w-5" />
+                  Contatos
+                </Link>
+                <Link
+                  href="#"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  prefetch={false}
+                >
+                  <PackageIcon className="h-5 w-5" />
+                  Produtos
+                </Link>
+                <Link
+                  href="#"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  prefetch={false}
+                >
+                  <UsersIcon className="h-5 w-5" />
+                  Clientes
+                </Link>
+                <Link
+                  href="#"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground data-[active=true]:bg-black data-[active=true]:text-white data-[active=true]:p-3 rounded-full w-[50%]"
+                  prefetch={false}
+                >
+                  <LineChartIcon className="h-5 w-5" />
+                  Relatórios
+                </Link>
+
+                <Link
+                  href="#"
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  prefetch={false}
+                >
+                  <LogoutIcon className="h-5 w-5" />
+                  Sair
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
         </header>
         <DashboardMain />
       </div>
+
       {children}
     </div >
+
+    </div>
+
   )
 }
