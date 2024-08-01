@@ -24,7 +24,7 @@ export default function HomePage() {
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
                           {link.profileImage ? (
-                            <Image src={link.profileImage} alt={link.name} className="h-10 w-10 rounded-full" />
+                            <img src={link.profileImage} alt={link.name} className="h-10 w-10 rounded-full" />
                           ) : (
                             <link.icon className="h-10 w-10 text-gray-500" />
                           )}

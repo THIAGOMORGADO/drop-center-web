@@ -8,7 +8,7 @@ export const appointmentList = [
     date: "2023-06-15",
     action: "View",
     icon: UserIcon,
-    profileImage: "https://randomuser.me/api/portraits/men/1.jpg",
+    profileImage: "https://github.com/THIAGOMORGADO.png",
     isWork: "Teacher",
   },
   {

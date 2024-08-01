@@ -20,7 +20,7 @@ export default function SettingPage() {
           <div className="w-24 h-24 bg-gray-300 rounded-full mr-6 flex items-center justify-center">
             {
               users.filter((user) => user.id === 2).map((user, id) => (
-                <Image key={id} src={user.img} alt={`Foto de ${user.name}`} className="w-full h-full object-cover rounded-full" />
+                <img key={id} src={user.img} alt={`Foto de ${user.name}`} className="w-full h-full object-cover rounded-full" />
               ))
             }
           </div>
