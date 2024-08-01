@@ -353,3 +353,24 @@ export function AddUserIcon(props: any) {
 }
 
 
+export function VideoCallIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="4" width="16" height="16" rx="2" ry="2" />
+      <path d="M22 8l-4 4 4 4V8z" />
+      <line x1="6" y1="10" x2="14" y2="10" />
+      <line x1="6" y1="14" x2="14" y2="14" />
+    </svg>
+  )
+}

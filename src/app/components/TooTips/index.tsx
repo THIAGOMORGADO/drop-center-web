@@ -1,18 +1,9 @@
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"
-import { DashboardIcon, HomeIcon, LineChartIcon, LogoutIcon, Package2Icon, PackageIcon, SettingsIcon, UsersIcon } from "../IconsSvg"
+import { DashboardIcon, LogoutIcon, SettingsIcon } from "../IconsSvg"
 import Link from "next/link"
-import { FileIcon } from "@radix-ui/react-icons"
-import { usePathname } from "next/navigation"
-import ItemAdminOrDashBoard from "../ItemAdminOrDashBoard"
-import { useState } from "react"
-import { TooltipAdmin } from "../ItemAdminOrDashBoard/TooltipAdmin"
+import { linkTooltip } from "@/app/utils/linkTooltip"
 
 export default function Sidebar() {
-  const currentPath = usePathname();
-
-  const [isAdmin, setIsAdmin] = useState(true)
-
-
   return (
     <>
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col bg-background sm:flex  text-white">
@@ -26,80 +17,26 @@ export default function Sidebar() {
                   prefetch={true}
                 >
                   <DashboardIcon className="h-4 w-4 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Paginia incial</span>
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="right">Pagina Inicial</TooltipContent>
 
             </Tooltip>
 
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="/dashboard/home"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white
-                  data-[active=true]:bg-black data-[active=true]:text-white"
-                  prefetch={false}
-                  data-active={currentPath === '/dashboard/home'}
-                >
-                  <HomeIcon className="h-5 w-5" />
-                  <span className="sr-only" >Home</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Home</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white data-[active=true]:bg-black data-[active=true]:text-white"
-                  prefetch={false}
-                >
-                  <FileIcon className="h-5 w-5" />
-                  <span className="sr-only">Orders</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Contatos</TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white data-[active=true]:bg-black data-[active=true]:text-white"
-                  prefetch={false}
-                >
-                  <PackageIcon className="h-5 w-5" />
-                  <span className="sr-only">Products</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Services</TooltipContent>
-            </Tooltip>
-
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white data-[active=true]:bg-black data-[active=true]:text-white"
-                  prefetch={false}
-                >
-                  <LineChartIcon className="h-5 w-5" />
-                  <span className="sr-only">Relatorio</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Relatorio</TooltipContent>
-            </Tooltip>
-
-            {/* Area Onde o Usuario vem com admintrador */}
-
-            <div className="pt-20">
-              {
-                isAdmin && (
-                  <TooltipAdmin />
-
-
-                )}
-
-            </div>
+            {
+              linkTooltip.map((link) => {
+                return (
+                  <Tooltip key={link.href}>
+                    <TooltipTrigger asChild>
+                      <Link href={link.href} className={link.className}>
+                        {link.icon && <link.icon className="h-5 w-5" />}
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent side="right">{link.name}</TooltipContent>
+                  </Tooltip>
+                )
+              })
+            }
           </TooltipProvider>
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5 ">

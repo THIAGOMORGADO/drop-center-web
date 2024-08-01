@@ -1,7 +1,7 @@
-export default function AnalitcsPage() {
+export default function Orders() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <p>Evolução</p>
+      <p>Video Call Rooms</p>
     </div>
-  );
-}
+  )
+} 
