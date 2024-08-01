@@ -37,12 +37,12 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
               {/* TooltipMain */}
               <nav className="flex flex-col gap-6 justify-strart items-start h-full pt-10">
                 {
-                  menuLinkMain.map((link) => {
+                  menuLinkMain.map((link, index) => {
                     const isActive = pathName.startsWith(link.href);
                     return (
                       <Link
                         href={link.href}
-                        key={link.href}
+                        key={index}
                         className={`
                         flex w-full items-center gap-1 px-2.5 text-muted-foreground 
                         ${isActive ? 'bg-black rounded-full p-3 text-white' : ''}
@@ -63,7 +63,6 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
                     return (
                       <div key={link.href} className="flex flex-row items-center justify-between">
                         <Link
-                          key={link.href}
                           href={link.href}
                           className="flex w-full items-center justify-between text-muted-foreground"
                           prefetch={false}
