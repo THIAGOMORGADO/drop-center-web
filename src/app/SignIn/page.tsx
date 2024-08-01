@@ -9,6 +9,8 @@ import { ChromeIcon, FacebookIcon, GithubIcon } from "../components/IconsSvg"
 
 export default function SignInPage() {
   const router = useRouter()
+
+
   const handleSignIn = () => {
     router.push('/dashboard')
   }
