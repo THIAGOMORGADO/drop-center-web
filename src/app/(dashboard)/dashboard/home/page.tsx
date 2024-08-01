@@ -1,5 +1,9 @@
 import { SheetItem } from "@/app/components/SheetItem";
 import { appointmentList } from "@/app/utils/appointmentList";
+<<<<<<< HEAD
+=======
+import Image from "next/image";
+>>>>>>> components/Header
 
 export default function HomePage() {
   return (
@@ -42,7 +46,11 @@ export default function HomePage() {
                     </td>
 
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+<<<<<<< HEAD
                       <SheetItem props={link} />
+=======
+                      <SheetItem />
+>>>>>>> components/Header
                     </td>
                   </tr>
                 ))}
