@@ -1,9 +1,16 @@
-import { HomeIcon, LineChartIcon, LogoutIcon, PackageIcon, SettingsIcon, UsersIcon, VideoCallIcon } from "../components/IconsSvg"
+
+import { DashboardIcon, HomeIcon, LineChartIcon, LogoutIcon, PackageIcon, SettingsIcon, UsersIcon, VideoCallIcon } from "../components/IconsSvg"
 export const menuLinkMain = [
+  
   {
     href: "/dashboard/home",
     icon: HomeIcon,
     name: "Home"
+  },
+  {
+    href: "/dashboard",
+    icon: DashboardIcon,
+    name: "Dashboard"
   },
   {
     href: "/dashboard/products",
