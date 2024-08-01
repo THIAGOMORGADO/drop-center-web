@@ -1,4 +1,4 @@
-import { HomeIcon, LineChartIcon, PackageIcon, UsersIcon, VideoCallIcon } from "../components/IconsSvg"
+import { HomeIcon, LineChartIcon, PackageIcon, SettingsIcon, UsersIcon, VideoCallIcon } from "../components/IconsSvg"
 
 const isAdmin = true
 
@@ -34,5 +34,6 @@ export const linkTooltip = [
     name: "Analise",
     icon: LineChartIcon,
     className: "flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white"
-  }
+  },
+  
 ]

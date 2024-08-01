@@ -8,7 +8,7 @@ import { appointmentList } from "@/app/utils/appointmentList";
 export default function DashboardPage() {
   return (
     <div>
-
+      <p>Setting</p>
     </div>
   )
 }
