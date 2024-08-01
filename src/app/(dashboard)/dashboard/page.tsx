@@ -4,8 +4,8 @@ import { Cell, Legend, Pie, PieChart, Tooltip, Bar, BarChart, ResponsiveContaine
 
 export default function DashboardPage() {
   const data = [
-    { name: 'Serviço A', value: 10 },
-    { name: 'Serviço B', value: 0 },
+    { name: 'Contatos', value: 30 },
+    { name: 'Reunies', value: 20 },
   ]
   const Bardata = [
     {
@@ -53,8 +53,8 @@ export default function DashboardPage() {
                       paddingAngle={5}
                       dataKey="value"
                     >
-                      <Cell key="cell-0" fill="#0088FE" />
-                      <Cell key="cell-1" fill="#00C49F" />
+                      <Cell key="cell-0" fill="#222" />
+                      <Cell key="cell-1" fill="#777" />
 
                     </Pie>
                     <Tooltip />
