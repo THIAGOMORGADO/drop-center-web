@@ -18,14 +18,17 @@ export default function SettingPage() {
         <div className="flex items-center mb-6">
           <div className="w-24 h-24 bg-gray-300 rounded-full mr-6 flex items-center justify-center">
             {
-              users.filter((user) => user.id === 3).map((user, id) => (
+              users.filter((user) => user.id === 2).map((user, id) => (
                 <img key={id} src={user.img} alt={`Foto de ${user.name}`} className="w-full h-full object-cover rounded-full" />
               ))
             }
           </div>
           <div>
-            {users.filter((user) => user.id === 3).map((user) => (
-              <h2 className="text-xl font-semibold">{user.name}</h2>
+            {users.filter((user) => user.id === 2).map((user) => (
+              <>
+                <h2 className="text-xl font-semibold">{user.name}</h2>
+                <p className="text-gray-500">{user.role}</p>
+              </>
             ))}
             <button className="text-blue-500 hover:text-blue-700 mt-2">
               Alterar foto
