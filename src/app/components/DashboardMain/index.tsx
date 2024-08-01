@@ -16,6 +16,7 @@ export default function DashboardMain() {
         <h1 className="text-sm font-bold">Bem-vindo,</h1>
         <h1 className="text-sm font-bold">{name}</h1>
       </div>
+
       <Button variant="outline" onClick={() => setIsOpenModal(true)} className="flex items-center justify-center hover:bg-zinc-500 hover:text-white">
         <PlusCircledIcon className="w-4 h-4 " />
 

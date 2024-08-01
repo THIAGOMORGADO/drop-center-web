@@ -3,15 +3,20 @@ import { DashboardIcon, HomeIcon, LineChartIcon, LogoutIcon, Package2Icon, Packa
 import Link from "next/link"
 import { FileIcon } from "@radix-ui/react-icons"
 import { usePathname } from "next/navigation"
+import ItemAdminOrDashBoard from "../ItemAdminOrDashBoard"
+import { useState } from "react"
+import { TooltipAdmin } from "../ItemAdminOrDashBoard/TooltipAdmin"
 
 export default function Sidebar() {
   const currentPath = usePathname();
+
+  const [isAdmin, setIsAdmin] = useState(true)
 
 
   return (
     <>
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col bg-background sm:flex  text-white">
-        <nav className="flex flex-col items-center gap-4 px-2 sm:py-5 text-black ">
+        <nav className="flex flex-col items-center gap-4 px-2 sm:py-5 text-black">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
@@ -54,7 +59,7 @@ export default function Sidebar() {
                   <span className="sr-only">Orders</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Orders</TooltipContent>
+              <TooltipContent side="right">Contatos</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -67,21 +72,9 @@ export default function Sidebar() {
                   <span className="sr-only">Products</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Products</TooltipContent>
+              <TooltipContent side="right">Services</TooltipContent>
             </Tooltip>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8 hover:bg-zinc-500 hover:text-white data-[active=true]:bg-black data-[active=true]:text-white"
-                  prefetch={false}
-                >
-                  <UsersIcon className="h-5 w-5" />
-                  <span className="sr-only">Customers</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Customers</TooltipContent>
-            </Tooltip>
+
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
@@ -90,11 +83,23 @@ export default function Sidebar() {
                   prefetch={false}
                 >
                   <LineChartIcon className="h-5 w-5" />
-                  <span className="sr-only">Analytics</span>
+                  <span className="sr-only">Relatorio</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Analytics</TooltipContent>
+              <TooltipContent side="right">Relatorio</TooltipContent>
             </Tooltip>
+
+            {/* Area Onde o Usuario vem com admintrador */}
+
+            <div className="pt-20">
+              {
+                isAdmin && (
+                  <TooltipAdmin />
+
+
+                )}
+
+            </div>
           </TooltipProvider>
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5 ">
