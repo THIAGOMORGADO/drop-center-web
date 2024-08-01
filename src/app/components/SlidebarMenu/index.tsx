@@ -8,9 +8,9 @@ import DashboardMain from "../DashboardMain"
 
 import Sidebar from "../TooTips"
 import { usePathname } from "next/navigation"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+
 import { menuLinkFooter, menuLinkMain } from "@/app/utils/links"
-import { DashboardIcon, LogoutIcon, MenuIcon, SettingsIcon } from "../IconsSvg"
+import { DashboardIcon, MenuIcon } from "../IconsSvg"
 
 export default function SlidebarMenu({ children }: { children: React.ReactNode }) {
   const pathName = usePathname();
@@ -38,7 +38,7 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
               <nav className="flex flex-col gap-6 justify-strart items-start h-full pt-10">
                 {
                   menuLinkMain.map((link, index) => {
-                    const isActive = pathName.startsWith(link.href);
+                    const isActive = pathName.split('/')[2] === link.href.split('/')[2];
                     return (
                       <Link
                         href={link.href}
