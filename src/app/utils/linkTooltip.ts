@@ -1,6 +1,5 @@
-import { HomeIcon, LineChartIcon, PackageIcon, SettingsIcon, UsersIcon, VideoCallIcon } from "../components/IconsSvg"
+import { HomeIcon, LineChartIcon, PackageIcon,  UsersIcon, VideoCallIcon } from "../components/IconsSvg"
 
-const isAdmin = true
 
 export const linkTooltip = [
   

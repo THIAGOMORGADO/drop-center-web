@@ -1,5 +1,4 @@
 import { SheetItem } from "@/app/components/SheetItem";
-import SlidebarMenu from "@/app/components/SlidebarMenu";
 import { appointmentList } from "@/app/utils/appointmentList";
 
 export default function HomePage() {
