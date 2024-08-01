@@ -1,8 +1,13 @@
 import { Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
 import Link from "next/link";
-import { AddUserIcon, UsersIcon } from "../../IconsSvg";
+import { AddUserIcon } from "../../IconsSvg";
 
 export function TooltipAdmin() {
+  const links = {
+
+  }
+
+
   return (
     <>
       <Tooltip>
