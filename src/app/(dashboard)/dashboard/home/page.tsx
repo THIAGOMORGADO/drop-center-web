@@ -1,5 +1,6 @@
 import { SheetItem } from "@/app/components/SheetItem";
 import { appointmentList } from "@/app/utils/appointmentList";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -23,7 +24,7 @@ export default function HomePage() {
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
                           {link.profileImage ? (
-                            <img src={link.profileImage} alt={link.name} className="h-10 w-10 rounded-full" />
+                            <Image src={link.profileImage} alt={link.name} className="h-10 w-10 rounded-full" />
                           ) : (
                             <link.icon className="h-10 w-10 text-gray-500" />
                           )}
@@ -42,7 +43,7 @@ export default function HomePage() {
                     </td>
 
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <SheetItem props={link} />
+                      <SheetItem />
                     </td>
                   </tr>
                 ))}

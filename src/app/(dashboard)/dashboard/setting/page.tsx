@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { users } from "@/app/utils/user";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function SettingPage() {
   const [newPassword, setNewPassword] = useState('');
@@ -19,7 +20,7 @@ export default function SettingPage() {
           <div className="w-24 h-24 bg-gray-300 rounded-full mr-6 flex items-center justify-center">
             {
               users.filter((user) => user.id === 2).map((user, id) => (
-                <img key={id} src={user.img} alt={`Foto de ${user.name}`} className="w-full h-full object-cover rounded-full" />
+                <Image key={id} src={user.img} alt={`Foto de ${user.name}`} className="w-full h-full object-cover rounded-full" />
               ))
             }
           </div>

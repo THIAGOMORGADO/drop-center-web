@@ -63,6 +63,7 @@ export default function SlidebarMenu({ children }: { children: React.ReactNode }
                     return (
                       <div key={link.href} className="flex flex-row items-center justify-between">
                         <Link
+                          key={link.href}
                           href={link.href}
                           className="flex w-full items-center justify-between text-muted-foreground"
                           prefetch={false}
